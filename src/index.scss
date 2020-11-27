@@ -1,0 +1,19 @@
+* {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+}
+
+#App[data-theme='dark'] {
+  --bg: black;
+  --text: white;
+  --primary: #97ce4c;
+  --secondary: #01b4c6;
+}
+
+#App[data-theme='light'] {
+  --bg: white;
+  --text: black;
+  --primary: #97ce4c;
+  --secondary: #01b4c6;
+}
