@@ -31,7 +31,6 @@ const Characters = () => {
     const handleClick = (favorite) => {
         dispatch({type: 'ADD_TO_FAVORITE', payload: favorite})
     }
-
     return (
         <div className={`${s.container} ${s.dark}`}>
             <div className={s.characters}>
