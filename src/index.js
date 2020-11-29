@@ -7,7 +7,7 @@ import ThemeContext from './context/themeContext'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeContext.Provider value="red">
+    <ThemeContext.Provider value="black">
     <App />
     </ThemeContext.Provider>
   </React.StrictMode>,
