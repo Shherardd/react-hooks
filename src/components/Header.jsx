@@ -1,17 +1,16 @@
-import React, { useState, useContext } from 'react'
+import React from 'react'
 import s from './header.module.scss'
-import ThemeContext from '../context/themeContext'
+import useDarkMode from './Hooks/useDarkMode'
 const Header = () => {
-    const [darkMode, setDarkMode] = useState(false)
-    const color = useContext(ThemeContext)
+    const [darkMode, setDarkMode] = useDarkMode();
     const handleCLick = () => {
         setDarkMode(!darkMode)
     }
     return (
         <div className={s.header}>
             <nav>
-                <h1 style={{color}}>React Hooks</h1>
-                <button type="button" onClick={() => handleCLick()}>{darkMode ? 'DarkMode' : 'LightMode'}</button>
+                <h1>React Hooks</h1>
+                <button className={s.toggle} type="button" onClick={() => handleCLick()}>{darkMode ? 'Light Mode' : 'Dark Mode'}</button>
                 {/*<button type="button" onClick={() => setDarkMode(!darkMode)}>{darkMode ? 'DarkMode' : 'LightMode'}</button>*/}
             </nav>
         </div>
